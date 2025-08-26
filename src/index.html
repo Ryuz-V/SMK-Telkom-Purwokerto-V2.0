@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" type="img/png" href="/Asset/logo-telkom-schools-bundar.png">
+  <title>SMK Telkom Purwokerto</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
+    <nav class="glass-navbar transition-all duration-300">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="w-9/12"> 
+            <img src="/Asset/Logo-SMK-Telkom-Purwokerto.png" alt="logo" class="navbar-logo">
+          </a>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="nav-link">Beranda</a>
+          <a href="#" class="nav-link">Profile Sekolah</a>
+          <a href="#" class="nav-link">Jurusan</a>
+          <a href="#" class="nav-link">Galeri</a>
+          <a href="#" class="nav-link">PPDB</a>
+        </div>
+
+        <button class="stella-ai-btn">
+          Stella AI
+          <img src="/Asset/noun-sparkle-6404439-removebg-preview.png" alt="Logo-Ai" class="w-8 ">
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-amber-900 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+        <a href="#" class="block nav-link text-center">Beranda</a>
+        <a href="#" class="block nav-link text-center">Profile Sekolah</a>
+        <a href="#" class="block nav-link text-center">Jurusan</a>
+        <a href="#" class="block nav-link text-center">Galeri</a>
+        <a href="#" class="block nav-link text-center">PPDB</a>
+        <button class="stella-ai-btn w-full justify-center mt-2">
+          Stella AI
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14"></path>
+            <path d="m5 12 7-7 7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+<!-- Hero -->
+<main class="w-full pt-10"> 
+  <section class="relative flex flex-col md:flex-row items-center justify-between min-h-[85vh] px-5 md:px-10 lg:px-20">
+    <div class="relative z-10 md:w-1/2 text-center md:text-left mb-6 md:mb-0 md:pl-8 lg:pl-12">
+      <h1 class="text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 mb-6 leading-13">
+        Ayo Jadilah Digital Talent Bersama <span class="text-red-600">SMK TELKOM PURWOKERTO</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+        Jelajahi jurusan berbasis teknologi dan bergabunglah dengan ribuan alumni yang telah sukses di dunia digital
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+        <a href="#" class="px-20 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold rounded-full shadow-lg hover:from-white hover:to-white hover:text-red-600 border-2 border-transparent hover:border-red-600 transition-all duration-300 text-center flex items-center justify-center">
+          Join Now
+        </a>
+        <a href="#" class="px-20 py-3 border-2 border-red-500 text-red-600 font-semibold rounded-full hover:bg-red-500 hover:text-white transition-all duration-300 text-center flex items-center justify-center gap-2">
+          Stella Ai
+          <img src="/Asset/noun-sparkle-6404439-removebg-preview.png" class="w-6.5 h-6.5">
+        </a>
+      </div>
+    </div>
+    
+    <!-- Image -->
+    <div class="relative z-10 md:w-1/2 flex justify-center mt-6 md:mt-0">
+      <div class="relative">
+        <img src="/Asset/Img_For_Demo_By_SmkTelkomBandung.png" alt="Img for demo by SmkTelkom Bandung" class="rounded-2xl transition-transform duration-500 w-full max-w-lg ml-20">
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Why us? -->
+<section class="py-20 px-5 md:px-10 lg:px-20 mb-5">
+  <div class="max-w-6xl mx-auto text-center mb-16">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+      Kenapa Harus Pilih <span class="text-red-600">SMK Telkom Purwokerto?</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+      Alasan kenapa kalian harus memilih untuk bergabung dengan SMK Telkom Purwokerto
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+      <div class="flex items-center justify-center mx-auto mb-6">
+        <img src="/Asset/list.png" alt="list_icon" class="w-12 h-12">
+      </div>
+      <h4 class="text-xl font-semibold text-gray-900 mb-4">Fasilitas Lengkap</h4>
+      <p class="text-gray-700 leading-relaxed">Penunjang belajar dengan kualitas premium.</p>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+      <div class="flex items-center justify-center mx-auto mb-6">
+        <img src="/Asset/collaboration.png" alt="collaboration_icon" class="w-12 h-12">
+      </div>
+      <h4 class="text-xl font-semibold text-gray-900 mb-4">Lingkungan Nyaman</h4>
+      <p class="text-gray-700 leading-relaxed">Berada di lingkungan yang asri, aman, dan kondusif.</p>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+      <div class="flex items-center justify-center mx-auto mb-6">
+        <img src="/Asset/hire.png" alt="hire_icon" class="w-12 h-12">
+      </div>
+      <h4 class="text-xl font-semibold text-gray-900 mb-4">Pengajar Kompeten</h4>
+      <p class="text-gray-700 leading-relaxed">Guru yang up-to-date dengan perkembangan industri.</p>
+    </div>
+    
+    <!-- Card 4 -->
+    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+      <div class="flex items-center justify-center mx-auto mb-6">
+        <img src="/Asset/agreement.png" alt="agreement_icon" class="w-12 h-12">
+      </div>
+      <h4 class="text-xl font-semibold text-gray-900 mb-4">Kerjasama Luas</h4>
+      <p class="text-gray-700 leading-relaxed">Memperbesar kesempatan bekerja sebelum lulus.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sambutan -->
+<section class="py-20 px-5 md:px-10 lg:px-2 mt-5 mb-5">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-10">
+      <div class="lg:w-2/5 flex justify-center">
+        <div class="relative ml-10">
+          <div class="absolute -inset-4 border-4 border-red-600 rounded-2xl transform rotate-3 opacity-30"></div>
+          <img src="/Asset/Untitled-design-min-1-1-1-1-1-600x750.png" alt="Kepala Sekolah SMK Telkom Purwokerto" 
+              class="relative z-10 w-100 h-120 object-cover rounded-2xl shadow-xl">
+        </div>
+      </div>
+      <div class="lg:w-3/5">
+        <h2 class="text-3xl font-bold text-red-600 mb-4">Sambutan Kepala Sekolah</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Kami menawarkan berbagai paket pelatihan di berbagai bidang studi dan dapat menawarkan peluang pembelajaran campuran untuk memenuhi kebutuhan Anda. 
+          Jika duduk di dalam ruangan dengan pelatih dan memiliki kesempatan untuk berdiskusi dengan peserta didik lain terdengar menyenangkan bagi Anda, 
+          maka kami dapat menawarkannya. Jika Anda lebih suka belajar di waktu Anda sendiri dan dengan kecepatan Anda sendiri, maka salah satu fasilitas kelas dunia kami.
+        </p>
+        <p class="text-gray-700 mb-8 leading-relaxed">
+          Jika Anda lebih suka belajar di waktu Anda sendiri dan dengan kecepatan Anda sendiri, maka salah satu paket e-learning kami mungkin cocok untuk Anda. 
+          Ada pilihan ketiga, yaitu Anda menyukai keduanya tetapi mungkin tidak dapat menghadiri semua sesi pelatihan, inilah saatnya blended learning menjadi 
+          pilihan yang tepat.
+        </p>
+        <div class="border-t pt-6">
+          <p class="text-red-600 font-semibold">Salam Hangat,Kepala Sekolah SMK Telkom Purwokerto</p>
+          <p class="text-gray-900 font-medium">-Tata Sambada, S.T., M.B.A.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Jurusan -->
+<section class="py-20 px-5 md:px-10 lg:px-2 mt-5 mb-5">
+        <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        SMK Telkom Membangun <span class="text-red-600">Pemimpin Teknologi Masa Depan</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        Bergabunglah bersama kami untuk mengasah keahlian, karakter, dan inovasi.
+        Inilah tempat di mana langkah Anda menuju masa depan gemilang dimulai.
+      </p>
+    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Gambar kiri -->
+                <div class="flex flex-col gap-8">
+                    <!-- Card 1: Developer -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover card-image-bottom">
+                        <div class="p-8 content">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Rekayasa Perangkat Lunak (RPL)</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+Jurusan Rekayasa Perangkat Lunak (RPL) adalah jurusan yang mempelajari cara merancang, membuat, dan mengelola perangkat lunak. Di sini kamu akan belajar coding, desain aplikasi, database, hingga pengembangan website.
+                                
+                            </p>
+                            <a href="#" class="inline-flex items-center px-5 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-colors">
+                                Pelajari Selengkapnya →
+                            </a>
+                        </div>
+                        <div class="h-60 overflow-hidden image-container">
+                            <img src="/Asset/shutterstock_1233726961-1-1.jpg"Developer" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Network Engineer -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-60 overflow-hidden">
+                            <img src="/Asset/network-engineer-adalah-EKRUT.jpg" alt="Network_Engineer" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Telekomunikasi Akses Jaringan (TJA)</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+Jurusan Telekomunikasi Jaringan Akses (TJA) adalah jurusan yang mempelajari teknologi jaringan, instalasi, konfigurasi, hingga pemeliharaan sistem komunikasi yang menjadi tulang punggung dunia digital saat ini.
+                            </p>
+                            <a href="#" class="inline-flex items-center px-5 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-colors">
+                                Pelajari Selengkapnya →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gambar Kanan -->
+                <div class="flex flex-col gap-8 mt-0 md:mt-12">
+                    <!-- Card 2: Game Developer -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <div class="h-56 overflow-hidden">
+                            <img src="/Asset/game-developer.jpg" alt="Game_Developer" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Pengembangan GIM (PG)</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+Jurusan Pengembangan Gim (PG) adalah tempat di mana kreativitas dan teknologi berpadu. Di sini, kamu akan belajar mulai dari desain karakter, konsep cerita, pemrograman, animasi, hingga membangun pengalaman bermain yang interaktif dan menarik.
+                            </p>
+                            <a href="#" class="inline-flex items-center px-5 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-colors">
+                                Pelajari Selengkapnya →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Teknisi Jaringan  -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover card-image-bottom">
+                        <div class="p-8 content">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Teknisi Komputer Jaringan (TKJ)</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+Jurusan Teknisi Komputer dan Jaringan (TKJ), adalah jurusan yang mempelajari merakit, mengelola, serta memperbaiki perangkat komputer dan jaringan, sekaligus menguasai konfigurasi server, keamanan jaringan, hingga troubleshooting.
+                            </p>
+                            <a href="#" class="inline-flex items-center px-5 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-colors">
+                                Pelajari Selengkapnya →
+                            </a>
+                        </div>
+                        <div class="h-56 overflow-hidden image-container">
+                            <img src="/Asset/41fff298-9718-4a99-ad2c-d48b35411694.avif" alt="Teknisi_Jaringan" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Data Murid -->
+<section class="py-16 w-full bg-red-600 mt-7 mb-5">
+  <div class="max-w-6xl mx-auto px-5 md:px-10 lg:px-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+      1.000+ Siswa Telah Bergabung Bersama Kami
+    </h2>
+    <p class="text-lg text-white opacity-90 max-w-3xl mx-auto leading-relaxed mb-12">
+      Siswa kami tidak hanya berasal dari Purwokerto, tetapi juga dari berbagai daerah di Indonesia, 
+      membuka peluang yang sama bagi semua untuk bergabung.
+    </p>
+    
+    <!-- Container untuk data jurusan -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+      <!-- Baris pertama: RPL dan PG -->
+      <div class="flex flex-col md:flex-row gap-10">
+        <!-- Jurusan RPL -->
+        <div class="relative w-full md:w-1/2">
+          <div class="absolute -inset-4 border-4 border-white rounded-2xl transform rotate-3 opacity-30"></div>
+          <div class="relative z-10 bg-white rounded-2xl shadow-xl p-8 h-full">
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">RPL</h3>
+              <p class="text-4xl font-bold text-red-600">320</p>
+              <p class="text-sm text-gray-600 mt-1">Siswa</p>
+              <p class="text-gray-700 mt-4 text-sm">Rekayasa Perangkat Lunak</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Jurusan PG -->
+        <div class="relative w-full md:w-1/2 mt-10 md:mt-0">
+          <div class="absolute -inset-4 border-4 border-white rounded-2xl transform -rotate-2 opacity-30"></div>
+          <div class="relative z-10 bg-white rounded-2xl shadow-xl p-8 h-full">
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">PG</h3>
+              <p class="text-4xl font-bold text-red-600">280</p>
+              <p class="text-sm text-gray-600 mt-1">Siswa</p>
+              <p class="text-gray-700 mt-4 text-sm">Pengembangan Gim</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Baris kedua: TKJ dan TJA -->
+      <div class="flex flex-col md:flex-row gap-10">
+        <!-- Jurusan TKJ -->
+        <div class="relative w-full md:w-1/2">
+          <div class="absolute -inset-4 border-4 border-white rounded-2xl transform -rotate-1 opacity-30"></div>
+          <div class="relative z-10 bg-white rounded-2xl shadow-xl p-8 h-full">
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">TKJ</h3>
+              <p class="text-4xl font-bold text-red-600">250</p>
+              <p class="text-sm text-gray-600 mt-1">Siswa</p>
+              <p class="text-gray-700 mt-4 text-sm">Teknisi Komputer Jaringan</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Jurusan TJA -->
+        <div class="relative w-full md:w-1/2 mt-10 md:mt-0">
+          <div class="absolute -inset-4 border-4 border-white rounded-2xl transform rotate-2 opacity-30"></div>
+          <div class="relative z-10 bg-white rounded-2xl shadow-xl p-8 h-full">
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">TJA</h3>
+              <p class="text-4xl font-bold text-red-600">150</p>
+              <p class="text-sm text-gray-600 mt-1">Siswa</p>
+              <p class="text-gray-700 mt-4 text-sm">Telekomunikasi Jaringan Akses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="w-full pb-16 -mt-5">
+  <div class="max-w-7xl mx-auto px-2">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-0">
+      <div class="aspect-w-4 aspect-h-3 overflow-hidden">
+        <img src="/Asset/IMG-20250723-WA0120-scaled.jpg" alt="Gallery image 1" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+      </div>
+      <div class="aspect-w-4 aspect-h-3 overflow-hidden">
+        <img src="/Asset/PROSES-SELEKSI-GURU-BARU-2-1-400x267.jpg" alt="Gallery image 2" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+      </div>
+      <div class="aspect-w-4 aspect-h-3 overflow-hidden">
+        <img src="/Asset/NETWORK-DESIGN-1-1-400x267.jpg" alt="Gallery image 3" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+      </div>
+      <div class="aspect-w-4 aspect-h-3 overflow-hidden">
+        <img src="/Asset/HUT-SMK-TELKOM-PURWOKERTO-KE-27-1-400x267.jpg" alt="Gallery image 4" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+      </div>
+      <div class="aspect-w-4 aspect-h-3 overflow-hidden">
+        <img src="/Asset/ANNUAL-MANAGEMENT-MEETING-1-1-400x267.jpg" alt="Gallery image 5" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="/src/script.js"></script>
+  <script src="path/to/dist/feather.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
