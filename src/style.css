@@ -141,5 +141,257 @@ body {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Gallery Section */
 
-    
+.gallery-section {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+.gallery-container {
+    width: 100%;
+    overflow-x: auto; 
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.gallery-grid {
+    display: flex; 
+    width: max-content; 
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 310px;
+    height: 220px;
+    margin: 0; 
+    padding: 0; 
+    flex-shrink: 0; ]
+}
+
+.gallery-image {
+    width: 100%;
+    height: 85%;
+    object-fit: cover; 
+    transition: filter 0.3s ease;
+    display: block; 
+}
+
+
+.gallery-image:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-container {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 280px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+/* Blog */
+.blog-card {
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover .blog-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .blog-info {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+    .category-btn.active {
+      background-color: #CE3939;
+      color: white;
+    }
+
+    /* Testimoni Section */
+.group {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
+.group:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.group::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.group:hover::before {
+  opacity: 1;
+}
+
+.group .absolute {
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .grid-cols-1 > div {
+    margin: 0.5rem;
+  }
+  
+  video {
+    height: 60vw;
+  }
+}
+
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+container {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 2rem;
+}
+
+/* parther */
+.partners-section {
+  width: 100%;
+  overflow: hidden;
+  padding: 3rem 0;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.partners-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.partners-scroll-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.partners-scroll {
+  display: flex;
+  animation: scrollPartners 30s linear infinite;
+  width: max-content;
+  padding: 1rem 0;
+}
+
+.partner-item {
+  flex-shrink: 0;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo {
+  height: 60px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scrollPartners {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Gradient overlay untuk efek fade */
+.partners-scroll-wrapper::before,
+.partners-scroll-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.partners-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+.partners-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .partners-scroll {
+    animation-duration: 20s;
+  }
+  
+  .partner-item {
+    padding: 0 1.5rem;
+  }
+  
+  .partner-logo {
+    height: 50px;
+  }
+  
+  .partners-scroll-wrapper::before,
+  .partners-scroll-wrapper::after {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-title {
+    font-size: 1.5rem;
+  }
+  
+  .partner-item {
+    padding: 0 1rem;
+  }
+  
+  .partner-logo {
+    height: 40px;
+  }
+}
