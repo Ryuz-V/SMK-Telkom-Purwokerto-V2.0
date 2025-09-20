@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Struktur Organisasi</title>
-    <link href="/src/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="/src/style.css">
-    <link rel="icon" type="img/png" href="/Asset/logo-telkom-schools-bundar.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .hero-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e60012' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .full-width-hero {
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            top: -75px;
-            margin-left: -50vw;
-            margin-right: -50vw;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akreditasi</title>
+  <link href="/src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" type="img/png" href="/Asset/logo-telkom-schools-bundar.png">
+  <style>
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e60012' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%E");
+    }
+    .full-width-hero {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      top: -75px;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 overflow-x-hidden" >
-    <!-- Header -->
-    <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
+<body class="bg-gray-50 overflow-x-hidden">
+  <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
         <nav class="glass-navbar transition-all duration-300">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
@@ -97,19 +88,28 @@
         </nav>
     </header>
 
-    <section class="hero-pattern min-h-screen flex items-center justify-center pt-24 pb-12 px-4 full-width-hero">
-        <div class="container mx-auto max-w-6xl">
-            <div class= "rounded-2xl overflow-hidden p-4 mt-28">
-                <img src="/Asset/Struktur-Organiasai-Stematel-Baru_WEB-2526.png" alt="Struktur Organisasi SMK Telkom Purwokerto" class="w-full h-auto">
-            </div>
-        </div>
-    </section>
+  <!-- Isi Akreditasi -->
+  <section class="hero-pattern min-h-screen flex items-center justify-center pt-24 pb-12 px-4 full-width-hero">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-red-600 mb-6">Akreditasi Sekolah</h1>
+      
+      <p class="text-gray-700 text-lg mb-8">
+        SMK Telkom Purwokerto telah meraih 
+        <span class="font-semibold text-green-600">Akreditasi A (Unggul)</span> 
+        dari BAN-S/M. Pencapaian ini menjadi bukti kualitas pendidikan, tenaga pendidik, 
+        serta fasilitas yang mendukung pembelajaran.
+      </p>
 
-    <script src="/src/script.js"></script>
-    <script src="path/to/dist/feather.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        feather.replace();
-    </script>
+      <div class="rounded-2xl overflow-hidden shadow-lg bg-white p-4">
+        <img src="/Asset/akreditasi.jpg" alt="Sertifikat Akreditasi" class="w-full h-auto rounded-lg">
+      </div>
+
+      <p class="text-sm text-gray-500 mt-3">Sertifikat Akreditasi resmi dari BAN-S/M</p>
+    </div>
+  </section>
+
+  <script src="/src/script.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace();</script>
 </body>
 </html>
