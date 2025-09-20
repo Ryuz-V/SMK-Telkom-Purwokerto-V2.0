@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+
+.container {
+    position: relative;
+    width: 1800px;
+    height: 900px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s ease;
+}
+
+.panel {
+    flex: 1;
+    height: 100%;
+    transition: transform 0.6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.form-panel {
+    background: #fff;
+    padding: 40px;
+}
+
+.form-wrapper {
+    position: absolute;
+    width: 80%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.form-wrapper.active {
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+}
+
+
+.form-wrapper img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 100px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+
+.form-wrapper h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.form-wrapper p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.form-wrapper input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #3a3f77;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2e325f;
+}
+
+.switch {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch span {
+    color: #CB312C;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.info-panel {
+    color: #fff;
+    background: url("/Asset/foto-telkom.png") center/cover no-repeat;
+    position: relative;
+}
+
+.info-panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(214, 40, 40, 0.9), rgba(214, 40, 40, 0.4));
+}
+
+.info-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.info-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.info-content p {
+    font-size: 18px;
+}
+
+.container.swap .form-panel {
+    transform: translateX(100%);
+}
+
+.container.swap .info-panel {
+    transform: translateX(-100%);
+}
+
+.panel {
+    flex: 1 0 50%;
+}
+
+
+.container.swap .login-form {
+    opacity: 1;
+    position: relative;
+}
+
+.container.swap .register-form {
+    opacity: 0;
+    position: absolute;
+}

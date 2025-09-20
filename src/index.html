@@ -21,45 +21,56 @@
           </a>
         </div>
 
-        <!-- Menu Items -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#" class="nav-link">Beranda</a>
-          <a href="#" class="nav-link">Profile Sekolah</a>
-          <a href="#" class="nav-link">Jurusan</a>
-          <a href="#" class="nav-link">Galeri</a>
-          <a href="#" class="nav-link">PPDB</a>
+<!-- Menu Items -->
+        <nav class="navbar">
+          <a href="#">Beranda</a>
+            <div class="dropdown">
+            <button class="dropbtn">Profile Sekolah</button>
+            <div class="dropdown-content">
+                <a href="/dropdown_profile/struktur.html">Struktur organisasi</a>
+                <a href="#">Arkeditasi</a>
+                <a href="#">Hubungan industri</a>
+                <a href="#">Fasilitas</a>
+                <a href="#">Virtual tour</a>
+                <a href="#">Prestasi</a>
+            </div>
+        </div>
+        
+        <!-- Dropdown Jurusan -->
+        <div class="dropdown">
+            <button class="dropbtn">Jurusan</button>
+            <div class="dropdown-content">
+                <a href="#">RPL</a>
+                <a href="#">PG</a>
+                <a href="#">TJA</a>
+                <a href="#">TKJ</a>
+            </div>
+        </div>
+        
+        <!-- Dropdown Galeri -->
+        <div class="dropdown">
+            <button class="dropbtn">Galeri</button>
+            <div class="dropdown-content">
+                <a href="#">Galeri</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+        
+        <!-- Dropdown Kontak Kami -->
+        <div class="dropdown">
+            <button class="dropbtn">Kontak Kami</button>
+            <div class="dropdown-content">
+                <a href="#">FAQ</a>
+                <a href="#">Kirim Pertanyaan</a>
+                <a href="#">HelpDesk</a>
+            </div>
         </div>
 
+          <a href="#">PPDB</a>
         <button class="stella-ai-btn">
           Stella AI
-          <img src="/Asset/noun-sparkle-6404439-removebg-preview.png" alt="Logo-Ai" class="w-8 ">
-        </button>
-
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-amber-900 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-        <a href="#" class="block nav-link text-center">Beranda</a>
-        <a href="#" class="block nav-link text-center">Profile Sekolah</a>
-        <a href="#" class="block nav-link text-center">Jurusan</a>
-        <a href="#" class="block nav-link text-center">Galeri</a>
-        <a href="#" class="block nav-link text-center">PPDB</a>
-        <button class="stella-ai-btn w-full justify-center mt-2">
-          Stella AI
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 5v14"></path>
-            <path d="m5 12 7-7 7 7"></path>
-          </svg>
-        </button>
-      </div>
+        <img src="/Asset/noun-sparkle-6404439-removebg-preview.png" alt="Logo-Ai" class="w-8">
+      </button>
     </nav>
   </header>
 

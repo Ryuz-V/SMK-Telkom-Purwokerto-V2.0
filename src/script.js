@@ -1,9 +1,3 @@
-// JavaScript untuk toggle mobile menu
-document.getElementById('mobile-menu-button').addEventListener('click', function() {
-  const mobileMenu = document.getElementById('mobile-menu');
-  mobileMenu.classList.toggle('hidden');
-});
-
 // JavaScript untuk mengubah navbar pada scroll
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('nav');
@@ -92,83 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Product slider functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const products = [
-        {
-            img: "/asset/Shoe_1.webp",
-            alt: "Shoe_1_Asics",
-            title: "ASICS GEL-KAYANO 30 Shoe",
-            price: "$160.00"
-        },
-        {
-            img: "/asset/Shoe_2.webp",
-            alt: "Shoe_2_Asics",
-            title: "ASICS GEL-NIMBUS 25 Shoe",
-            price: "$160.00"
-        },
-        {
-            img: "/asset/Shoe_3.webp",
-            alt: "Shoe_3_Asics",
-            title: "ASICS NOVABLAST 4 Shoe",
-            price: "$140.00"
-        },
-        {
-            img: "/asset/Shoe_4.webp",
-            alt: "Shoe_1_Converse",
-            title: "Converse x NARUTO SHIPPUDEN Itachi Weapon Mid Shoe",
-            price: "$120.00"
-        },
-        {
-            img: "/asset/Shoe_5.jpg",
-            alt: "Shoe_1_Adidas",
-            title: "McCartney Sportswear Shoe",
-            price: "$230.00"
-        },
-        {
-            img: "/asset/Shoe_6.jpg",
-            alt: "Shoe_2_Adidas",
-            title: "Adistar 3 Shoe",
-            price: "$116.88"
-        },
-        {
-            img: "/asset/Shoe_7.webp",
-            alt: "Shoe_7_Asics",
-            title: "ASICS GT-2000 12 Shoe",
-            price: "$140.00"
-        },
-        {
-            img: "/asset/Shoe_8.jpg",
-            alt: "Shoe_3_Adidas",
-            title: "Adidas F50 League TF Shoe",
-            price: "$70.00"
-        },
-        {
-            img: "/asset/Shoe_9.jpg",
-            alt: "Shoe_4_Adidas",
-            title: "CODECHAOS BOA '25 Spikeless Golf Shoes",
-            price: "$180.00"
-        },
-        {
-            img: "/asset/Shoe_10.webp",
-            alt: "Shoe_1_DC",
-            title: "DC Shoes Court Graffik",
-            price: "$20.99"
-        },
-        {
-            img: "/asset/Shoe_11.webp",
-            alt: "Shoe_2_DC",
-            title: "Men Construct Shoe",
-            price: "$90.00"
-        },
-        {
-            img: "/asset/Shoe_12.webp",
-            alt: "Shoe_3_DC",
-            title: "Men Ascend Skate Shoe",
-            price: "$115.00"
-        }
-    ];
-
     const productsWrapper = document.querySelector('.products-wrapper');
     const dotsContainer = document.querySelector('.dots-container');
     const productsPerPage = 4;
@@ -222,11 +139,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 dot.classList.remove('active');
             }
         });
-    }
-
-    // Auto slide (optional)
-    // setInterval(() => {
-    //     currentPage = (currentPage + 1) % totalPages;
-    //     goToPage(currentPage);
-    // }, 5000);
-});
+    };
