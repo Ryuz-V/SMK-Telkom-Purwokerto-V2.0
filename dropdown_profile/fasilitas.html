@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Struktur Organisasi</title>
+    <title>Fasilitas</title>
     <link href="/src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="/src/style.css">
     <link rel="icon" type="image/png" href="/Asset/logo-telkom.png">
@@ -76,8 +76,33 @@
     </header>
 
 <!-- Main content -->
-
-
+<main class="pt-32 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto mt-20">
+    <section class="mb-12 ">
+        <h1 class="text-4xl font-bold text-center text-red-600 mb-10">Fasilitas SMK Telkom Purwokerto</h1>
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="facility-btn active" data-category="all">
+                Semua Fasilitas
+            </button>
+            <button class="facility-btn" data-category="kelas">
+                Ruang Kelas
+            </button>
+            <button class="facility-btn" data-category="operasional">
+                Ruang Operasional
+            </button>
+            <button class="facility-btn" data-category="pendukung">
+                Fasilitas Pendukung
+            </button>
+            <button class="facility-btn" data-category="gedung">
+                Gedung
+            </button>
+        </div>
+        
+        <!-- Container untuk gambar fasilitas -->
+        <div class="facility-grid" id="facilityContainer">
+            <!-- Gambar akan dimuat di sini melalui JavaScript -->
+        </div>
+    </section>
+</main>
 
 <!-- footer -->
   <footer class="bg-gray-900 text-white pt-16 pb-8 px-4 md:px-8 lg:w-full mt-20">
@@ -164,6 +189,128 @@
       </div>
     </div>
   </footer>
+
+<script>
+    // Data gambar fasilitas (Anda bisa mengganti dengan gambar asli)
+    const facilities = [
+        {
+            id: 1,
+            title: "Ruang Kelas Multimedia",
+            category: "kelas",
+            image: "https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 2,
+            title: "Laboratorium Komputer",
+            category: "kelas",
+            image: "https://images.unsplash.com/photo-1592424002053-21f369ad7fdb?ixlib=rb-1.2.1&auto=format&fit=crop&w-800&q=80"
+        },
+        {
+            id: 3,
+            title: "Ruang Guru",
+            category: "operasional",
+            image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w-800&q=80"
+        },
+        {
+            id: 4,
+            title: "Perpustakaan Digital",
+            category: "operasional",
+            image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 5,
+            title: "Mushola",
+            category: "pendukung",
+            image: "https://images.unsplash.com/photo-1512125352224-1e16a4b9c047?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 6,
+            title: "Kantin Sehat",
+            category: "pendukung",
+            image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 7,
+            title: "Lapangan Olahraga",
+            category: "pendukung",
+            image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 8,
+            title: "Gedung Utama",
+            category: "gedung",
+            image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 9,
+            title: "Auditorium",
+            category: "gedung",
+            image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        },
+        {
+            id: 10,
+            title: "Ruang Praktik Jaringan",
+            category: "kelas",
+            image: "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        }
+    ];
+
+    // Fungsi untuk merender gambar
+    function renderFacilities(category = 'all') {
+        const container = document.getElementById('facilityContainer');
+        const filteredFacilities = category === 'all' 
+            ? facilities 
+            : facilities.filter(facility => facility.category === category);
+        
+        if (filteredFacilities.length === 0) {
+            container.innerHTML = '<div class="no-images">Tidak ada gambar untuk kategori ini</div>';
+            return;
+        }
+        
+        container.innerHTML = filteredFacilities.map(facility => `
+            <div class="facility-card">
+                <img src="${facility.image}" alt="${facility.title}" class="facility-img">
+                <span class="facility-category">${getCategoryName(facility.category)}</span>
+                <h3 class="facility-title">${facility.title}</h3>
+            </div>
+        `).join('');
+    }
+
+    // Fungsi untuk mendapatkan nama kategori
+    function getCategoryName(category) {
+        const categoryNames = {
+            'kelas': 'Ruang Kelas',
+            'operasional': 'Ruang Operasional',
+            'pendukung': 'Fasilitas Pendukung',
+            'gedung': 'Gedung'
+        };
+        return categoryNames[category] || category;
+    }
+
+    // Event listener untuk button
+    document.addEventListener('DOMContentLoaded', function() {
+        // Render semua gambar saat pertama kali load
+        renderFacilities();
+        
+        // Tambahkan event listener untuk setiap button
+        const buttons = document.querySelectorAll('.facility-btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Hapus class active dari semua button
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                // Tambah class active ke button yang diklik
+                this.classList.add('active');
+                
+                // Dapatkan kategori dari data attribute
+                const category = this.getAttribute('data-category');
+                
+                // Render gambar berdasarkan kategori
+                renderFacilities(category);
+            });
+        });
+    });
+</script>
 
   <script src="/src/script.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
