@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fasilitas</title>
-    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/src/style.css">
     <link rel="icon" type="image/png" href="/Asset/logo-telkom.png">
     <script src="https://kit.fontawesome.com/5ea0eadb61.js" crossorigin="anonymous"></script>
+    <style>
+        .facility-btn {
+            @apply px-6 py-2 rounded-lg border-2 border-red-600 bg-transparent text-red-600 font-semibold transition-all duration-300 hover:bg-red-600 hover:text-white hover:shadow-lg hover:-translate-y-1;
+        }
+        
+        .facility-btn.active {
+            @apply bg-red-600 text-white shadow-lg;
+        }
+        
+        .facility-card {
+            @apply bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+        }
+        
+        .category-badge {
+            @apply absolute top-4 right-4 bg-red-600/90 text-white px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 overflow-x-hidden">
-  <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
+    <!-- Header -->
+    <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
         <nav class="glass-navbar transition-all duration-300">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
@@ -25,14 +43,14 @@
                     <a href="/src/index.html">Beranda</a>
                     <div class="dropdown">
                         <button class="dropbtn">Profile Sekolah</button>
-            <div class="dropdown-content">
-                <a href="/dropdown_profile/struktur.html">Struktur organisasi</a>
-                <a href="/dropdown_profile/akreditasi.html">Akreditasi</a>
-                <a href="/dropdown_profile/hubungan.html">Hubungan industri</a>
-                <a href="/dropdown_profile/fasilitas.html">Fasilitas</a>
-                <a href="https://tour.smktelkom-pwt.sch.id/">Virtual tour</a>
-                <a href="/dropdown_profile/prestasi.html">Prestasi</a>
-            </div>
+                        <div class="dropdown-content">
+                            <a href="/dropdown_profile/struktur.html">Struktur organisasi</a>
+                            <a href="/dropdown_profile/akreditasi.html">Akreditasi</a>
+                            <a href="/dropdown_profile/hubungan.html">Hubungan industri</a>
+                            <a href="/dropdown_profile/fasilitas.html">Fasilitas</a>
+                            <a href="https://tour.smktelkom-pwt.sch.id/">Virtual tour</a>
+                            <a href="/dropdown_profile/prestasi.html">Prestasi</a>
+                        </div>
                     </div>
                     
                     <!-- Dropdown Jurusan -->
@@ -75,34 +93,38 @@
         </nav>
     </header>
 
-<!-- Main content -->
-<main class="pt-32 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto mt-20">
-    <section class="mb-12 ">
-        <h1 class="text-4xl font-bold text-center text-red-600 mb-10">Fasilitas SMK Telkom Purwokerto</h1>
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-            <button class="facility-btn active" data-category="all">
-                Semua Fasilitas
-            </button>
-            <button class="facility-btn" data-category="kelas">
-                Ruang Kelas
-            </button>
-            <button class="facility-btn" data-category="operasional">
-                Ruang Operasional
-            </button>
-            <button class="facility-btn" data-category="pendukung">
-                Fasilitas Pendukung
-            </button>
-            <button class="facility-btn" data-category="gedung">
-                Gedung
-            </button>
-        </div>
-        
-        <!-- Container untuk gambar fasilitas -->
-        <div class="facility-grid" id="facilityContainer">
-            <!-- Gambar akan dimuat di sini melalui JavaScript -->
-        </div>
-    </section>
-</main>
+    <!-- Main Content -->
+    <main class="pt-32 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto mt-20">
+        <section class="mb-12">
+            <h1 class="text-4xl font-bold text-center text-red-600 mb-10">
+                Fasilitas SMK Telkom Purwokerto
+            </h1>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="facility-btn active" data-category="all">
+                    Semua Fasilitas
+                </button>
+                <button class="facility-btn" data-category="kelas">
+                    Ruang Kelas
+                </button>
+                <button class="facility-btn" data-category="operasional">
+                    Ruang Operasional
+                </button>
+                <button class="facility-btn" data-category="pendukung">
+                    Fasilitas Pendukung
+                </button>
+                <button class="facility-btn" data-category="gedung">
+                    Gedung
+                </button>
+            </div>
+
+            <!-- Facility Cards Grid -->
+            <div id="facilityContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cards will be loaded here by JavaScript -->
+            </div>
+        </section>
+    </main>
 
 <!-- footer -->
   <footer class="bg-gray-900 text-white pt-16 pb-8 px-4 md:px-8 lg:w-full mt-20">
@@ -190,130 +212,207 @@
     </div>
   </footer>
 
-<script>
-    // Data gambar fasilitas (Anda bisa mengganti dengan gambar asli)
-    const facilities = [
-        {
-            id: 1,
-            title: "Ruang Kelas Multimedia",
-            category: "kelas",
-            image: "https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 2,
-            title: "Laboratorium Komputer",
-            category: "kelas",
-            image: "https://images.unsplash.com/photo-1592424002053-21f369ad7fdb?ixlib=rb-1.2.1&auto=format&fit=crop&w-800&q=80"
-        },
-        {
-            id: 3,
-            title: "Ruang Guru",
-            category: "operasional",
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w-800&q=80"
-        },
-        {
-            id: 4,
-            title: "Perpustakaan Digital",
-            category: "operasional",
-            image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 5,
-            title: "Mushola",
-            category: "pendukung",
-            image: "https://images.unsplash.com/photo-1512125352224-1e16a4b9c047?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 6,
-            title: "Kantin Sehat",
-            category: "pendukung",
-            image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 7,
-            title: "Lapangan Olahraga",
-            category: "pendukung",
-            image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 8,
-            title: "Gedung Utama",
-            category: "gedung",
-            image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 9,
-            title: "Auditorium",
-            category: "gedung",
-            image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-        },
-        {
-            id: 10,
-            title: "Ruang Praktik Jaringan",
-            category: "kelas",
-            image: "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    <script>
+        // Data fasilitas
+        const facilities = [
+            {
+                id: 1,
+                title: "Ruang Kelas Multimedia",
+                category: "kelas",
+                image: "https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Ruang kelas dilengkapi dengan proyektor, sound system, dan perangkat multimedia untuk mendukung pembelajaran interaktif.",
+                features: ["Proyektor HD", "Sound System", "AC", "Wifi"]
+            },
+            {
+                id: 2,
+                title: "Laboratorium Komputer",
+                category: "kelas",
+                image: "https://images.unsplash.com/photo-1592424002053-21f369ad7fdb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Lab komputer dengan spesifikasi tinggi untuk praktikum pemrograman, jaringan, dan desain grafis.",
+                features: ["PC i7", "Monitor 24'", "Jaringan LAN", "Software Lengkap"]
+            },
+            {
+                id: 3,
+                title: "Ruang Guru",
+                category: "operasional",
+                image: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Ruang kerja yang nyaman untuk guru dilengkapi dengan fasilitas pendukung administrasi dan konsultasi.",
+                features: ["AC", "Locker", "Meeting Room", "Printer"]
+            },
+            {
+                id: 4,
+                title: "Perpustakaan Digital",
+                category: "operasional",
+                image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Perpustakaan modern dengan koleksi buku fisik dan digital serta akses internet untuk penelitian.",
+                features: ["E-Book", "Komputer", "Area Baca", "Wifi"]
+            },
+            {
+                id: 5,
+                title: "Mushola",
+                category: "pendukung",
+                image: "https://images.unsplash.com/photo-1512125352224-1e16a4b9c047?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Tempat ibadah yang bersih dan nyaman untuk seluruh siswa dan guru.",
+                features: ["AC", "Sound System", "Tempat Wudhu", "Karpet"]
+            },
+            {
+                id: 6,
+                title: "Kantin Sehat",
+                category: "pendukung",
+                image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Kantin dengan makanan sehat dan bergizi yang terjangkau untuk siswa.",
+                features: ["Makanan Sehat", "Minuman", "Area Makan", "Free Wifi"]
+            },
+            {
+                id: 7,
+                title: "Lapangan Olahraga",
+                category: "pendukung",
+                image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Lapangan serbaguna untuk berbagai kegiatan olahraga seperti basket, voli, dan futsal.",
+                features: ["Basket", "Voli", "Futsal", "Tribun"]
+            },
+            {
+                id: 8,
+                title: "Gedung Utama",
+                category: "gedung",
+                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Gedung utama sekolah dengan arsitektur modern dan fasilitas lengkap.",
+                features: ["3 Lantai", "Lift", "Parkir", "Security"]
+            },
+            {
+                id: 9,
+                title: "Auditorium",
+                category: "gedung",
+                image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Auditorium berkapasitas besar untuk seminar, workshop, dan acara sekolah.",
+                features: ["Kapasitas 300", "Sound System", "Proyektor", "AC"]
+            },
+            {
+                id: 10,
+                title: "Ruang Praktik Jaringan",
+                category: "kelas",
+                image: "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Ruang praktik khusus untuk pembelajaran jaringan komputer dengan peralatan terkini.",
+                features: ["Router Cisco", "Switch", "Server", "Tools"]
+            },
+            {
+                id: 11,
+                title: "Studio Desain",
+                category: "kelas",
+                image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Studio khusus untuk pembelajaran desain grafis dan multimedia.",
+                features: ["Mac Pro", "Tablet Grafis", "Software Adobe", "Printer"]
+            },
+            {
+                id: 12,
+                title: "Taman Hijau",
+                category: "pendukung",
+                image: "https://images.unsplash.com/photo-1560851248-7a2a48efb433?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                description: "Area hijau yang asri untuk tempat relaksasi dan belajar di luar ruangan.",
+                features: ["Gazebo", "Tanaman", "Bench", "Lampu Taman"]
+            }
+        ];
+
+        // Fungsi untuk mendapatkan nama kategori
+        function getCategoryName(category) {
+            const categoryNames = {
+                'kelas': 'Ruang Kelas',
+                'operasional': 'Ruang Operasional',
+                'pendukung': 'Fasilitas Pendukung',
+                'gedung': 'Gedung'
+            };
+            return categoryNames[category] || category;
         }
-    ];
 
-    // Fungsi untuk merender gambar
-    function renderFacilities(category = 'all') {
-        const container = document.getElementById('facilityContainer');
-        const filteredFacilities = category === 'all' 
-            ? facilities 
-            : facilities.filter(facility => facility.category === category);
-        
-        if (filteredFacilities.length === 0) {
-            container.innerHTML = '<div class="no-images">Tidak ada gambar untuk kategori ini</div>';
-            return;
+        // Fungsi untuk merender facility cards
+        function renderFacilities(category = 'all') {
+            const container = document.getElementById('facilityContainer');
+            const filteredFacilities = category === 'all' 
+                ? facilities 
+                : facilities.filter(facility => facility.category === category);
+            
+            if (filteredFacilities.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <div class="text-gray-400 text-lg">
+                            <i class="fas fa-image text-4xl mb-4"></i>
+                            <p>Tidak ada gambar untuk kategori ini</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = filteredFacilities.map(facility => `
+                <div class="facility-card">
+                    <!-- Image Container -->
+                    <div class="relative h-56 md:h-64 overflow-hidden">
+                        <img src="${facility.image}" 
+                             alt="${facility.title}" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <span class="category-badge">${getCategoryName(facility.category)}</span>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">
+                            ${facility.title}
+                        </h3>
+                        
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            ${facility.description}
+                        </p>
+                        
+                        <!-- Features -->
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">
+                                <i class="fas fa-check-circle text-red-500 mr-1"></i>
+                                Fasilitas:
+                            </h4>
+                            <div class="flex flex-wrap gap-2">
+                                ${facility.features.map(feature => `
+                                    <span class="text-xs bg-red-50 text-red-700 px-3 py-1 rounded-full">
+                                        ${feature}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <!-- Category Badge -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <span class="inline-flex items-center text-xs text-gray-500">
+                                <i class="fas fa-tag text-red-500 mr-2"></i>
+                                ${getCategoryName(facility.category)}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
         }
-        
-        container.innerHTML = filteredFacilities.map(facility => `
-            <div class="facility-card">
-                <img src="${facility.image}" alt="${facility.title}" class="facility-img">
-                <span class="facility-category">${getCategoryName(facility.category)}</span>
-                <h3 class="facility-title">${facility.title}</h3>
-            </div>
-        `).join('');
-    }
 
-    // Fungsi untuk mendapatkan nama kategori
-    function getCategoryName(category) {
-        const categoryNames = {
-            'kelas': 'Ruang Kelas',
-            'operasional': 'Ruang Operasional',
-            'pendukung': 'Fasilitas Pendukung',
-            'gedung': 'Gedung'
-        };
-        return categoryNames[category] || category;
-    }
-
-    // Event listener untuk button
-    document.addEventListener('DOMContentLoaded', function() {
-        // Render semua gambar saat pertama kali load
-        renderFacilities();
-        
-        // Tambahkan event listener untuk setiap button
-        const buttons = document.querySelectorAll('.facility-btn');
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Hapus class active dari semua button
-                buttons.forEach(btn => btn.classList.remove('active'));
-                
-                // Tambah class active ke button yang diklik
-                this.classList.add('active');
-                
-                // Dapatkan kategori dari data attribute
-                const category = this.getAttribute('data-category');
-                
-                // Render gambar berdasarkan kategori
-                renderFacilities(category);
+        // Event listener untuk filter buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            // Render semua gambar saat pertama kali load
+            renderFacilities();
+            
+            // Tambahkan event listener untuk setiap button
+            const buttons = document.querySelectorAll('.facility-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Hapus class active dari semua button
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Tambah class active ke button yang diklik
+                    this.classList.add('active');
+                    
+                    // Dapatkan kategori dari data attribute
+                    const category = this.getAttribute('data-category');
+                    
+                    // Render gambar berdasarkan kategori
+                    renderFacilities(category);
+                });
             });
         });
-    });
-</script>
-
-  <script src="/src/script.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script>feather.replace();</script>
+    </script>
 </body>
 </html>
