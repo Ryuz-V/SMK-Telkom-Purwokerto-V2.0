@@ -33,7 +33,7 @@ body {
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
       border-radius: 50px;
       border: 2px solid rgba(255, 255, 255, 0.7);
-      width: 1100px;
+      width: 1080px;
       margin-top: 10px;
       padding: 0.7rem 1.5rem !important; 
       display: flex;
@@ -143,6 +143,7 @@ body {
   height: 50px;
   transform: translateX(10px);
   margin-left: 20px;
+  width: 150px;
 }
 
 .stella-ai-btn:hover {
@@ -680,13 +681,6 @@ container {
             opacity: 0.3;
         }
 
-        /* Filter section styles */
-        .filter-section {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(229, 231, 235, 0.8);
-        }
-
         /* Stats section */
         .stats-card {
             background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
@@ -703,3 +697,16 @@ container {
             align-items: center;
             gap: 0.25rem;
         }
+
+        /* Tambahkan di CSS Anda */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}

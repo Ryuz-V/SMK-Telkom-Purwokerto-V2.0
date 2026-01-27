@@ -10,158 +10,146 @@
 </head>
 
 <body class="bg-gray-50 overflow-x-hidden">
-<!-- Header -->
-    <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
-        <nav class="glass-navbar transition-all duration-300">
-            <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="#" class="w-9/12"> 
-                        <img src="/Asset/Logo-SMK-Telkom-Purwokerto.png" alt="logo" class="navbar-logo">
-                    </a>
-                </div>
+  <!-- Header -->
+  <header class="fixed w-full z-50 flex justify-center" style="top: 20px;">
+    <nav class="glass-navbar transition-all duration-300">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="w-9/12"> 
+            <img src="/Asset/Logo-SMK-Telkom-Purwokerto.png" alt="logo" class="navbar-logo">
+          </a>
+        </div>
 
-                <!-- Menu Items -->
-                <nav class="navbar">
-                    <a href="/src/index.html">Beranda</a>
-                    <div class="dropdown">
-                        <button class="dropbtn">Profile Sekolah</button>
-                        <div class="dropdown-content">
-                            <a href="/dropdown_profile/struktur.html">Struktur organisasi</a>
-                            <a href="/dropdown_profile/akreditasi.html">Akreditasi</a>
-                            <a href="/dropdown_profile/hubungan.html">Hubungan industri</a>
-                            <a href="/dropdown_profile/fasilitas.html">Fasilitas</a>
-                            <a href="https://tour.smktelkom-pwt.sch.id/">Virtual tour</a>
-                            <a href="/dropdown_profile/prestasi.html">Prestasi</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Dropdown Jurusan -->
-                    <div class="dropdown">
-                        <button class="dropbtn">Jurusan</button>
-                        <div class="dropdown-content">
-                            <a href="#">RPL</a>
-                            <a href="#">PG</a>
-                            <a href="#">TJA</a>
-                            <a href="#">TKJ</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Dropdown Galeri -->
-                    <div class="dropdown">
-                        <button class="dropbtn">Galeri</button>
-                        <div class="dropdown-content">
-                            <a href="#">Galeri</a>
-                            <a href="#">Blog</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Dropdown Kontak Kami -->
-                    <div class="dropdown">
-                        <button class="dropbtn">Kontak Kami</button>
-                        <div class="dropdown-content">
-                            <a href="#">FAQ</a>
-                            <a href="#">Kirim Pertanyaan</a>
-                            <a href="#">HelpDesk</a>
-                        </div>
-                    </div>
-
-                    <a href="#">PPDB</a>
-                    <button class="stella-ai-btn">
-                        Stella AI
-                        <img src="/Asset/noun-sparkle-6404439-removebg-preview.png" alt="Logo-Ai" class="w-8">
-                    </button>
-                </nav>
+<!-- Menu Items -->
+        <nav class="navbar">
+          <a href="#">Beranda</a>
+            <div class="dropdown">
+            <button class="dropbtn">Profile Sekolah</button>
+            <div class="dropdown-content">
+                <a href="/dropdown_profile/struktur.html">Struktur organisasi</a>
+                <a href="/dropdown_profile/akreditasi.html">Akreditasi</a>
+                <a href="/dropdown_profile/hubungan.html">Hubungan industri</a>
+                <a href="/dropdown_profile/fasilitas.html">Fasilitas</a>
+                <a href="https://tour.smktelkom-pwt.sch.id/">Virtual tour</a>
+                <a href="/dropdown_profile/prestasi.html">Prestasi</a>
             </div>
-        </nav>
-    </header>
+        </div>
+        
+        <!-- Dropdown Jurusan -->
+        <div class="dropdown">
+            <button class="dropbtn">Jurusan</button>
+            <div class="dropdown-content">
+                <a href="#">RPL</a>
+                <a href="#">PG</a>
+                <a href="#">TJA</a>
+                <a href="#">TKJ</a>
+            </div>
+        </div>
+        
+        <!-- Dropdown Galeri -->
+        <div class="dropdown">
+            <button class="dropbtn">Galeri</button>
+            <div class="dropdown-content">
+                <a href="#">Galeri</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+        
+        <!-- Dropdown Kontak Kami -->
+        <div class="dropdown">
+            <button class="dropbtn">Kontak Kami</button>
+            <div class="dropdown-content">
+                <a href="#">FAQ</a>
+                <a href="#">Kirim Pertanyaan</a>
+                <a href="#">HelpDesk</a>
+            </div>
+        </div>
+        <button class="stella-ai-btn">
+        PPDB
+      </button>
+    </nav>
+  </header>
 
     <section class="hero-pattern min-h-screen pt-24 pb-12 px-6 sm:px-8 md:px-12 lg:px-20 mt-20">
         <div class="max-w-7xl mx-auto">
             <!-- Filter Section -->
-            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                    <!-- Search Input -->
-                    <div class="lg:col-span-1">
-                        <label for="search" class="block text-sm font-medium text-gray-700 mb-1">Cari Prestasi</label>
-                        <div class="relative">
-                            <input 
-                                type="text" 
-                                id="search" 
-                                placeholder="Cari prestasi..."
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
-                            >
-                            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
-                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Tingkat Lomba -->
-                    <div>
-                        <label for="tingkat" class="block text-sm font-medium text-gray-700 mb-1">Tingkat Lomba</label>
-                        <select 
-                            id="tingkat" 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
-                        >
-                            <option value="">Semua Tingkat</option>
-                            <option value="sekolah">Sekolah</option>
-                            <option value="kecamatan">Kecamatan</option>
-                            <option value="kabupaten">Kabupaten</option>
-                            <option value="provinsi">Provinsi</option>
-                            <option value="nasional">Nasional</option>
-                            <option value="internasional">Internasional</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Jurusan -->
-                    <div>
-                        <label for="jurusan" class="block text-sm font-medium text-gray-700 mb-1">Jurusan</label>
-                        <select 
-                            id="jurusan" 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
-                        >
-                            <option value="">Semua Jurusan</option>
-                            <option value="rpl">RPL</option>
-                            <option value="pg">PG</option>
-                            <option value="tja">TJA</option>
-                            <option value="tkj">TKJ</option>
-                            <option value="umum">Umum</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Tahun -->
-                    <div>
-                        <label for="tahun" class="block text-sm font-medium text-gray-700 mb-1">Tahun</label>
-                        <select 
-                            id="tahun" 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
-                        >
-                            <option value="">Semua Tahun</option>
-                            <option value="2024">2024</option>
-                            <option value="2023">2023</option>
-                            <option value="2022">2022</option>
-                            <option value="2021">2021</option>
-                            <option value="2020">2020</option>
-                            <option value="2019">2019</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Tombol Filter -->
-                    <div class="flex items-end">
-                        <button class="w-full bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-medium">
-                            Terapkan Filter
-                        </button>
-                    </div>
+<div class="bg-white rounded-lg shadow-md p-6 mb-8 mx-auto max-w-5xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <!-- Search Input -->
+        <div class="lg:col-span-1">
+            <label for="search" class="block text-sm font-medium text-gray-700 mb-1">Cari Prestasi</label>
+            <div class="relative">
+                <input 
+                    type="text" 
+                    id="search" 
+                    placeholder="Cari prestasi..."
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+                >
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
                 </div>
             </div>
+        </div>
+        
+        <!-- Tingkat Lomba -->
+        <div>
+            <label for="tingkat" class="block text-sm font-medium text-gray-700 mb-1">Tingkat Lomba</label>
+            <select 
+                id="tingkat" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+            >
+                <option value="">Semua Tingkat</option>
+                <option value="sekolah">Sekolah</option>
+                <option value="kecamatan">Kecamatan</option>
+                <option value="kabupaten">Kabupaten</option>
+                <option value="provinsi">Provinsi</option>
+                <option value="nasional">Nasional</option>
+                <option value="internasional">Internasional</option>
+            </select>
+        </div>
+        
+        <!-- Jurusan -->
+        <div>
+            <label for="jurusan" class="block text-sm font-medium text-gray-700 mb-1">Jurusan</label>
+            <select 
+                id="jurusan" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+            >
+                <option value="">Semua Jurusan</option>
+                <option value="rpl">RPL</option>
+                <option value="pg">PG</option>
+                <option value="tja">TJA</option>
+                <option value="tkj">TKJ</option>
+                <option value="umum">Umum</option>
+            </select>
+        </div>
+        
+        <!-- Tahun -->
+        <div>
+            <label for="tahun" class="block text-sm font-medium text-gray-700 mb-1">Tahun</label>
+            <select 
+                id="tahun" 
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all"
+            >
+                <option value="">Semua Tahun</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+            </select>
+        </div>
+    </div>
+</div>
 
             <!-- Achievement List Section -->
             <div class="space-y-8">
                 <!-- Achievement Item 1 -->
-                <div class="achievement-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="achievement-card bg-white rounded-2xl shadow-xl overflow-hidden mb-5">
                     <div class="p-8">
                         <div class="flex flex-col lg:flex-row lg:items-start gap-6">
                             <!-- Logo/Medal -->
@@ -222,7 +210,7 @@
 
                             <!-- Action Button -->
                             <div class="lg:self-center">
-                                <button class="px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors font-semibold flex items-center group/btn">
+                                <button class="px-6 py-3 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-colors font-semibold flex items-center group/btn rounded-2xl">
                                     Detail Prestasi
                                     <svg class="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -234,7 +222,7 @@
                 </div>
 
                 <!-- Achievement Item 2 -->
-                <div class="achievement-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="achievement-card bg-white rounded-2xl shadow-xl overflow-hidden mb-5">
                     <div class="p-8">
                         <div class="flex flex-col lg:flex-row lg:items-start gap-6">
                             <!-- Logo/Medal -->
