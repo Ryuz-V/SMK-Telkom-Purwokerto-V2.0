@@ -129,9 +129,8 @@ body {
 
 /* Tombol Stella AI*/
 .stella-ai-btn {
-  background: transparent;
-  border: 2px solid #000;
-  color: #CE3939;
+  background: #CE3939;
+  color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 30px;
   font-weight: 600;
@@ -148,8 +147,8 @@ body {
 
 .stella-ai-btn:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background-color: #dc2626; /* Warna merah-600 */
-  color: white;
+  background-color: #ffffff; /* Warna merah-600 */
+  color: black;
   border-color: #dc2626;
 }
 
