@@ -1,0 +1,411 @@
+/* =====================================================
+   JURUSAN PAGES - Shared Stylesheet
+   SMK Telkom Purwokerto
+   ===================================================== */
+
+/* ---------- HERO SECTION ---------- */
+.jurusan-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.jurusan-hero .hero-pattern-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: repeating-linear-gradient(
+    45deg,
+    white 0,
+    white 1px,
+    transparent 0,
+    transparent 50%
+  );
+  background-size: 20px 20px;
+}
+
+.jurusan-hero .hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 8rem 1.5rem 4rem;
+  max-width: 800px;
+}
+
+.jurusan-hero .hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.jurusan-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.jurusan-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- SECTION HEADERS ---------- */
+.section-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #dc2626;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.section-title span {
+  color: #dc2626;
+}
+
+.section-desc {
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- TENTANG JURUSAN ---------- */
+.tentang-section {
+  padding: 5rem 1.25rem;
+}
+
+.tentang-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .tentang-inner {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.tentang-text {
+  flex: 1;
+}
+
+.tentang-text p {
+  color: #374151;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.tentang-image {
+  flex: 1;
+  width: 100%;
+}
+
+.tentang-image img {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  display: block;
+  transform: none !important;
+}
+
+/* Fix inline rotate on TJA/TKJ tentang image wrapper */
+.tentang-image .relative > .absolute {
+  display: none;
+}
+
+/* ---------- MAPEL (KURIKULUM) CARDS ---------- */
+.mapel-section {
+  padding: 5rem 1.25rem;
+  background-color: #f9fafb;
+}
+
+.mapel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mapel-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mapel-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mapel-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #dc2626;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.mapel-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.mapel-icon {
+  width: 3rem;
+  height: 3rem;
+  background: #fee2e2;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.mapel-icon i {
+  color: #dc2626;
+  font-size: 1.25rem;
+}
+
+.mapel-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.mapel-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ---------- PRAKTIK CARDS ---------- */
+.praktik-section {
+  padding: 5rem 1.25rem;
+  background: #fff;
+}
+
+.praktik-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .praktik-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.praktik-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: #f9fafb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s;
+}
+
+.praktik-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+.praktik-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  min-width: 3.25rem;
+  background: #dc2626;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.praktik-icon i {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.praktik-text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.praktik-text p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ---------- PROSPEK PEKERJAAN ---------- */
+.prospek-section {
+  padding: 5rem 1.25rem;
+  background: #111827;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.prospek-section .section-label {
+  color: #f87171;
+}
+
+.prospek-section .section-title {
+  color: #fff;
+}
+
+.prospek-section .section-desc {
+  color: #9ca3af;
+}
+
+.prospek-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .prospek-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .prospek-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.prospek-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: background 0.3s, transform 0.2s, border-color 0.3s;
+  cursor: default;
+  width: 100%;
+}
+
+.prospek-card:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-4px);
+}
+
+.prospek-card i {
+  font-size: 1.75rem;
+  color: #f87171;
+  margin-bottom: 0.75rem;
+  display: block;
+  transition: color 0.3s;
+}
+
+.prospek-card:hover i {
+  color: #fff;
+}
+
+.prospek-card p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e5e7eb;
+  line-height: 1.4;
+}
+
+/* ---------- CTA SECTION ---------- */
+.cta-section {
+  padding: 4rem 1.25rem;
+  background: #dc2626;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.cta-section h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+  background: #f9fafb;
+  transform: translateY(-2px);
+}
+
+/* ---------- CONTAINER UTILITY ---------- */
+.jurusan-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.text-center-block {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  width: 100%;
+}
+
